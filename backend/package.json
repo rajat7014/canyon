@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "node index",
+    "start": "node server.js",
     "format:check": "prettier --check .",
     "format:write": "prettier --write ."
   },
