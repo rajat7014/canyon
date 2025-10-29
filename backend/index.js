@@ -6,6 +6,14 @@ console.log(`Welcome to ${'Clover'.cyan}`);
 
 const express = require('express');
 const app = express();
+const cors = require('cors');
+app.use(
+  cors({
+    origin: '*', // or specific URL like 'https://your-frontend.vercel.app'
+    credentials: true,
+  }),
+);
+
 const http = require('http');
 const io = require('socket.io');
 const store = require('./src/store');
@@ -33,15 +41,15 @@ mediasoup.init();
 
 const listen = () => server.listen(Config.port, () => console.log(`Server listening on port ${Config.port}`.green));
 
-server.on('error', (e) => {
-  if (e.code === 'EADDRINUSE') {
-    console.log('Specified port unavailable, retrying in 10 seconds...'.red);
-    setTimeout(() => {
-      server.close();
-      server.listen(Config.port);
-    }, Config.retryAfter);
-  }
-});
+// server.on('error', (e) => {
+//   if (e.code === 'EADDRINUSE') {
+//     console.log('Specified port unavailable, retrying in 10 seconds...'.red);
+//     setTimeout(() => {
+//       server.close();
+//       server.listen(Config.port);
+//     }, Config.retryAfter);
+//   }
+// });
 
 listen();
 
