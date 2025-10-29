@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "mongodb": "^6.20.0",
-    "mongoose": "^8.19.0"
+    "mongoose": "^8.19.0",
+    "vite": "^7.1.12"
   },
   "scripts": {
     "start": "node backend/server.js",
