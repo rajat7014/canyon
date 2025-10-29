@@ -62,6 +62,7 @@
     "@babel/eslint-parser": "7.23.10",
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "@babel/preset-react": "7.23.3",
+    "@vitejs/plugin-react": "^5.1.0",
     "eslint": "8.56.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "9.1.0",
